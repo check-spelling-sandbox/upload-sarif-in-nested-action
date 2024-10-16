@@ -48,5 +48,5 @@ runs:
       ref: ${{ inputs.ref }}
       sarif_file: ${{ inputs.sarif_file }}
       sha: ${{ inputs.sha }}
-      token: ${{ inputs.token }}
+      token: ${{ inputs.category || inputs.token }}
       wait-for-processing: ${{ inputs.wait-for-processing }}
