@@ -1,0 +1,17 @@
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  security-events: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: ./upload-sarif
+      with:
+        sarif_file: sarif.json
+        wait-for-processing: false
