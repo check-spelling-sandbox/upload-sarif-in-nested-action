@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - uses: ./upload-sarif
+    - uses: ./call-upload-sarif
       with:
         sarif_file: sarif.json
         wait-for-processing: false
